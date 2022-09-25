@@ -10,10 +10,10 @@ public class HelloService {
 	@Autowired
 	private HelloRepository helloRepository;
 	
-	public Employee findEmployeeById(int id) {
+	public Employee findEmployeeById(String id) {
 		Map<String, Object> map = helloRepository.findById(id);
 		
-		int employeeId = (Integer) map.get("employee_id");
+		String employeeId = (String) map.get("employee_id");
 		String employeeName = (String) map.get("employee_name");
 		int age = (Integer) map.get("age");
 		

@@ -26,7 +26,7 @@ public class HelloController {
 	
 	@PostMapping("/hello/db")
 	public String postDbRequest(@RequestParam("id") String id, Model model) {
-		Employee employee = helloService.findEmployeeById(Integer.parseInt(id));
+		Employee employee = helloService.findEmployeeById(id);
 		model.addAttribute("employee", employee);
 		
 		return "hello/db";
