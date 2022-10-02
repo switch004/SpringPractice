@@ -36,6 +36,10 @@ dependencies {
     implementation('org.webjars:webjars-locator:0.40')
 }
 
+dependencies {
+	implementation ('org.springframework.boot:spring-boot-starter-validation')
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
